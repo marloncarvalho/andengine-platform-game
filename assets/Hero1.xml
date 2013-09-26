@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<texture version="1" file="H.png" type="bitmap" width="512" height="1024" pixelformat="RGBA_8888" minfilter="linear" magfilter="linear" wrapt="clamp" wraps="clamp" premultiplyalpha="false">
+    <!-- Created with TexturePacker http://www.codeandweb.com/texturepacker -->
+    <!-- $TexturePacker:SmartUpdate:779bc92b7ca93bb8e5958c880ab6656d:1/1$ -->
+    <textureregion id="0" src="climb (1).png" x="216" y="236" width="72" height="105" rotated="true" trimmed="true" srcx="21" srcy="10" srcwidth="114" srcheight="115"/>
+    <textureregion id="1" src="climb (2).png" x="109" y="236" width="72" height="105" rotated="true" trimmed="true" srcx="21" srcy="10" srcwidth="114" srcheight="115"/>
+    <textureregion id="2" src="climb (3).png" x="438" y="212" width="72" height="105" rotated="false" trimmed="true" srcx="21" srcy="10" srcwidth="114" srcheight="115"/>
+    <textureregion id="3" src="climb (4).png" x="323" y="306" width="68" height="105" rotated="true" trimmed="true" srcx="25" srcy="10" srcwidth="114" srcheight="115"/>
+    <textureregion id="4" src="climb (5).png" x="109" y="310" width="66" height="105" rotated="true" trimmed="true" srcx="27" srcy="10" srcwidth="114" srcheight="115"/>
+    <textureregion id="5" src="climb (6).png" x="323" y="236" width="68" height="105" rotated="true" trimmed="true" srcx="25" srcy="10" srcwidth="114" srcheight="115"/>
+    <textureregion id="6" src="crouch (1).png" x="2" y="613" width="76" height="91" rotated="true" trimmed="true" srcx="22" srcy="24" srcwidth="114" srcheight="115"/>
+    <textureregion id="7" src="crouch (2).png" x="2" y="691" width="74" height="91" rotated="true" trimmed="true" srcx="23" srcy="24" srcwidth="114" srcheight="115"/>
+    <textureregion id="8" src="crouch (3).png" x="98" y="600" width="76" height="91" rotated="true" trimmed="true" srcx="22" srcy="24" srcwidth="114" srcheight="115"/>
+    <textureregion id="9" src="crouch (4).png" x="204" y="540" width="76" height="91" rotated="true" trimmed="true" srcx="22" srcy="24" srcwidth="114" srcheight="115"/>
+    <textureregion id="10" src="die (1).png" x="430" y="319" width="80" height="103" rotated="false" trimmed="true" srcx="18" srcy="12" srcwidth="114" srcheight="115"/>
+    <textureregion id="11" src="die (2).png" x="423" y="424" width="86" height="89" rotated="false" trimmed="true" srcx="14" srcy="26" srcwidth="114" srcheight="115"/>
+    <textureregion id="12" src="die (3).png" x="412" y="515" width="98" height="77" rotated="false" trimmed="true" srcx="8" srcy="38" srcwidth="114" srcheight="115"/>
+    <textureregion id="13" src="die (4).png" x="2" y="544" width="94" height="67" rotated="false" trimmed="true" srcx="10" srcy="48" srcwidth="114" srcheight="115"/>
+    <textureregion id="14" src="die (5).png" x="321" y="376" width="100" height="67" rotated="false" trimmed="true" srcx="7" srcy="48" srcwidth="114" srcheight="115"/>
+    <textureregion id="15" src="duck.png" x="95" y="678" width="74" height="91" rotated="true" trimmed="true" srcx="28" srcy="24" srcwidth="114" srcheight="115"/>
+    <textureregion id="16" src="hurt.png" x="2" y="312" width="82" height="103" rotated="true" trimmed="true" srcx="16" srcy="12" srcwidth="114" srcheight="115"/>
+    <textureregion id="17" src="idle.png" x="438" y="103" width="72" height="107" rotated="false" trimmed="true" srcx="21" srcy="8" srcwidth="114" srcheight="115"/>
+    <textureregion id="18" src="jump (1).png" x="2" y="2" width="76" height="109" rotated="true" trimmed="true" srcx="19" srcy="6" srcwidth="114" srcheight="115"/>
+    <textureregion id="19" src="jump (2).png" x="216" y="310" width="76" height="103" rotated="true" trimmed="true" srcx="19" srcy="12" srcwidth="114" srcheight="115"/>
+    <textureregion id="20" src="jump (3).png" x="2" y="236" width="74" height="105" rotated="true" trimmed="true" srcx="20" srcy="10" srcwidth="114" srcheight="115"/>
+    <textureregion id="21" src="kneel (1).png" x="307" y="519" width="76" height="91" rotated="true" trimmed="true" srcx="22" srcy="24" srcwidth="114" srcheight="115"/>
+    <textureregion id="22" src="kneel (2).png" x="191" y="618" width="74" height="91" rotated="true" trimmed="true" srcx="23" srcy="24" srcwidth="114" srcheight="115"/>
+    <textureregion id="23" src="kneel (3).png" x="297" y="597" width="74" height="91" rotated="true" trimmed="true" srcx="23" srcy="24" srcwidth="114" srcheight="115"/>
+    <textureregion id="24" src="kneel (4).png" x="400" y="594" width="74" height="91" rotated="true" trimmed="true" srcx="23" srcy="24" srcwidth="114" srcheight="115"/>
+    <textureregion id="25" src="run (1).png" x="210" y="388" width="76" height="99" rotated="true" trimmed="true" srcx="18" srcy="16" srcwidth="114" srcheight="115"/>
+    <textureregion id="26" src="run (2).png" x="206" y="466" width="72" height="99" rotated="true" trimmed="true" srcx="21" srcy="16" srcwidth="114" srcheight="115"/>
+    <textureregion id="27" src="run (3).png" x="107" y="378" width="72" height="101" rotated="true" trimmed="true" srcx="21" srcy="14" srcwidth="114" srcheight="115"/>
+    <textureregion id="28" src="run (4).png" x="2" y="396" width="72" height="101" rotated="true" trimmed="true" srcx="21" srcy="14" srcwidth="114" srcheight="115"/>
+    <textureregion id="29" src="run (5).png" x="311" y="445" width="72" height="99" rotated="true" trimmed="true" srcx="21" srcy="16" srcwidth="114" srcheight="115"/>
+    <textureregion id="30" src="run (6).png" x="2" y="470" width="72" height="99" rotated="true" trimmed="true" srcx="21" srcy="16" srcwidth="114" srcheight="115"/>
+    <textureregion id="31" src="run (7).png" x="440" y="2" width="70" height="99" rotated="false" trimmed="true" srcx="22" srcy="16" srcwidth="114" srcheight="115"/>
+    <textureregion id="32" src="run (8).png" x="2" y="470" width="72" height="99" rotated="true" trimmed="true" srcx="21" srcy="16" srcwidth="114" srcheight="115"/>
+    <textureregion id="33" src="run (9).png" x="105" y="452" width="72" height="99" rotated="true" trimmed="true" srcx="21" srcy="16" srcwidth="114" srcheight="115"/>
+    <textureregion id="34" src="run (10).png" x="2" y="396" width="72" height="101" rotated="true" trimmed="true" srcx="21" srcy="14" srcwidth="114" srcheight="115"/>
+    <textureregion id="35" src="run (11).png" x="107" y="378" width="72" height="101" rotated="true" trimmed="true" srcx="21" srcy="14" srcwidth="114" srcheight="115"/>
+    <textureregion id="36" src="run (12).png" x="103" y="526" width="72" height="99" rotated="true" trimmed="true" srcx="22" srcy="16" srcwidth="114" srcheight="115"/>
+    <textureregion id="37" src="shoot (1).png" x="329" y="158" width="76" height="107" rotated="true" trimmed="true" srcx="22" srcy="8" srcwidth="114" srcheight="115"/>
+    <textureregion id="38" src="shoot (2).png" x="220" y="158" width="76" height="107" rotated="true" trimmed="true" srcx="22" srcy="8" srcwidth="114" srcheight="115"/>
+    <textureregion id="39" src="shoot (3).png" x="111" y="158" width="76" height="107" rotated="true" trimmed="true" srcx="22" srcy="8" srcwidth="114" srcheight="115"/>
+    <textureregion id="40" src="shoot (4).png" x="2" y="158" width="76" height="107" rotated="true" trimmed="true" srcx="22" srcy="8" srcwidth="114" srcheight="115"/>
+    <textureregion id="41" src="shoot (5).png" x="329" y="158" width="76" height="107" rotated="true" trimmed="true" srcx="22" srcy="8" srcwidth="114" srcheight="115"/>
+    <textureregion id="42" src="walk (1).png" x="329" y="80" width="76" height="107" rotated="true" trimmed="true" srcx="19" srcy="8" srcwidth="114" srcheight="115"/>
+    <textureregion id="43" src="walk (2).png" x="220" y="80" width="76" height="107" rotated="true" trimmed="true" srcx="19" srcy="8" srcwidth="114" srcheight="115"/>
+    <textureregion id="44" src="walk (3).png" x="111" y="80" width="76" height="107" rotated="true" trimmed="true" srcx="19" srcy="8" srcwidth="114" srcheight="115"/>
+    <textureregion id="45" src="walk (4).png" x="220" y="80" width="76" height="107" rotated="true" trimmed="true" srcx="19" srcy="8" srcwidth="114" srcheight="115"/>
+    <textureregion id="46" src="walk (5).png" x="2" y="80" width="76" height="107" rotated="true" trimmed="true" srcx="19" srcy="8" srcwidth="114" srcheight="115"/>
+    <textureregion id="47" src="walk (6).png" x="331" y="2" width="76" height="107" rotated="true" trimmed="true" srcx="19" srcy="8" srcwidth="114" srcheight="115"/>
+    <textureregion id="48" src="walk (7).png" x="222" y="2" width="76" height="107" rotated="true" trimmed="true" srcx="19" srcy="8" srcwidth="114" srcheight="115"/>
+    <textureregion id="49" src="walk (8).png" x="113" y="2" width="76" height="107" rotated="true" trimmed="true" srcx="19" srcy="8" srcwidth="114" srcheight="115"/>
+</texture>
