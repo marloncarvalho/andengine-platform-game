@@ -1,7 +1,7 @@
 package com.alienlabz.platform.world;
 
 import com.alienlabz.platform.entity.Enemy;
-import com.alienlabz.platform.entity.Player;
+import com.alienlabz.platform.entity.Character;
 import com.alienlabz.platform.map.MapLoader;
 
 /**
@@ -15,7 +15,7 @@ import com.alienlabz.platform.map.MapLoader;
  * @since 0.0.1
  */
 abstract public class World {
-	private Player mPlayer;
+	private Character mPlayer;
 	protected MapLoader mMapLoader;
 
 	/**
@@ -46,7 +46,7 @@ abstract public class World {
 	 * 
 	 * @param pPlayer Jogador.
 	 */
-	public void setPlayer(Player pPlayer) {
+	public void setPlayer(Character pPlayer) {
 		mPlayer = pPlayer;
 	}
 
@@ -73,7 +73,7 @@ abstract public class World {
 	 * 
 	 * @return Jogador.
 	 */
-	public Player getPlayer() {
+	public Character getPlayer() {
 		return mPlayer;
 	}
 

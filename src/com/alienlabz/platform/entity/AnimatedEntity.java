@@ -2,7 +2,6 @@ package com.alienlabz.platform.entity;
 
 import org.andengine.engine.camera.Camera;
 import org.andengine.entity.sprite.AnimatedSprite;
-import org.andengine.opengl.texture.atlas.bitmap.BitmapTextureAtlasTextureRegionFactory;
 import org.andengine.opengl.texture.region.ITiledTextureRegion;
 import org.andengine.opengl.texture.region.TiledTextureRegion;
 import org.andengine.opengl.util.GLState;
@@ -14,7 +13,6 @@ import org.andengine.util.texturepack.TexturePackTextureRegionLibrary;
 import org.andengine.util.texturepack.exception.TexturePackParseException;
 
 import com.alienlabz.platform.GlobalState;
-import com.alienlabz.platform.resources.ResourcesPool;
 
 /**
  * Uma entidade que Ž "animada" ou possui movimentos.
@@ -31,9 +29,9 @@ abstract public class AnimatedEntity extends Entity {
 		super(pX, pY, pImage);
 	}
 
-	protected void loadResources() {
+	protected void loadResources(String pXML) {
 		try {
-			mTexturePack = new TexturePackLoader(GlobalState.getActivity().getAssets(), GlobalState.getActivity().getTextureManager()).loadFromAsset("Hero1.xml", "");
+			mTexturePack = new TexturePackLoader(GlobalState.getActivity().getAssets(), GlobalState.getActivity().getTextureManager()).loadFromAsset(pXML, "");
 			mTexturePack.loadTexture();
 			mTexturePackLibrary = mTexturePack.getTexturePackTextureRegionLibrary();
 		} catch (final TexturePackParseException e) {

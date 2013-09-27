@@ -12,8 +12,11 @@ import org.andengine.engine.options.ScreenOrientation;
 import org.andengine.engine.options.WakeLockOptions;
 import org.andengine.engine.options.resolutionpolicy.RatioResolutionPolicy;
 import org.andengine.entity.scene.Scene;
+import org.andengine.opengl.util.GLHelper;
+import org.andengine.opengl.util.GLState;
 import org.andengine.ui.activity.BaseGameActivity;
 
+import android.opengl.GLU;
 import android.os.Bundle;
 import android.view.KeyEvent;
 

@@ -5,7 +5,7 @@ import org.andengine.extension.physics.box2d.PhysicsWorld;
 
 import com.alienlabz.platform.Game;
 import com.alienlabz.platform.GlobalState;
-import com.alienlabz.platform.entity.Player;
+import com.alienlabz.platform.entity.Character;
 import com.alienlabz.platform.game.scene.GameScene;
 import com.badlogic.gdx.math.Vector2;
 
@@ -26,7 +26,7 @@ public class Box2DWorld extends World {
 	}
 
 	@Override
-	public void setPlayer(Player pPlayer) {
+	public void setPlayer(Character pPlayer) {
 		super.setPlayer(pPlayer);
 		pPlayer.setPhysicsWorld(mPhysicsWorld);
 		GlobalState.getCamera().setChaseEntity(pPlayer.getSprite());

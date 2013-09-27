@@ -1,9 +1,24 @@
 package com.alienlabz.platform.game.scene;
 
+import java.io.IOException;
+
+import org.andengine.entity.scene.background.ParallaxBackground;
+import org.andengine.entity.scene.background.ParallaxBackground.ParallaxEntity;
+import org.andengine.entity.sprite.Sprite;
+import org.andengine.opengl.texture.ITexture;
+import org.andengine.opengl.texture.atlas.bitmap.BitmapTextureAtlasTextureRegionFactory;
+import org.andengine.opengl.texture.bitmap.AssetBitmapTexture;
+import org.andengine.opengl.texture.region.ITextureRegion;
+import org.andengine.opengl.texture.region.TextureRegionFactory;
+
 import com.alienlabz.platform.BaseScene;
 import com.alienlabz.platform.Controller;
 import com.alienlabz.platform.Controller.IControllerListener;
-import com.alienlabz.platform.entity.Player;
+import com.alienlabz.platform.GlobalState;
+import com.alienlabz.platform.entity.Ability;
+import com.alienlabz.platform.entity.Hero;
+import com.alienlabz.platform.entity.Jump;
+import com.alienlabz.platform.entity.Walk;
 import com.alienlabz.platform.map.TMXMapLoader;
 import com.alienlabz.platform.world.Box2DWorld;
 import com.alienlabz.platform.world.World;
@@ -17,13 +32,35 @@ import com.alienlabz.platform.world.World;
 public class GameScene extends BaseScene {
 	private World mWorld;
 	private Controller mDigitalController;
-	private Player mPlayer;
+	private Hero mHero;
 
 	@Override
 	public void onCreate() {
 		createWorld();
 		createDigitalController();
-		attachChild(mPlayer.getSprite());
+		createBackground();
+		attachChild(mHero.getSprite());
+	}
+
+	private void createBackground() {
+		ParallaxBackground parallaxBackground;
+		ITextureRegion mParallaxLayerBackTextureRegion = null;
+		BitmapTextureAtlasTextureRegionFactory.setAssetBasePath("gfx/");
+
+		ITexture mParallaxLayerBackTexture;
+		try {
+			mParallaxLayerBackTexture = new AssetBitmapTexture(GlobalState.getActivity().getTextureManager(), GlobalState.getActivity().getAssets(), "gfx/game/background.jpg");
+			mParallaxLayerBackTextureRegion = TextureRegionFactory.extractFromTexture(mParallaxLayerBackTexture);
+			mParallaxLayerBackTexture.load();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		Sprite parallaxSprite = new Sprite(0, 0, mParallaxLayerBackTextureRegion, GlobalState.getActivity().getVertexBufferObjectManager());
+		parallaxSprite.setOffsetCenter(0, 0);
+		parallaxBackground = new ParallaxBackground(0, 0, 0);
+		parallaxBackground.attachParallaxEntity(new ParallaxEntity(1, parallaxSprite));
+		setBackground(parallaxBackground);
 	}
 
 	/**
@@ -33,7 +70,7 @@ public class GameScene extends BaseScene {
 		mWorld = new Box2DWorld(this);
 		mWorld.setDefaultGravity(0, -75);
 		mWorld.setMapLoader(new TMXMapLoader());
-		mWorld.setPlayer(mPlayer);
+		mWorld.setPlayer(mHero);
 		mWorld.initialize();
 	}
 
@@ -46,17 +83,16 @@ public class GameScene extends BaseScene {
 
 			@Override
 			public void onMove(float pX, float pY) {
-				mPlayer.walk(pX);
+				mHero.perform(Walk.class, Ability.p(Walk.PARAM_VELOCITY, pX));
 			}
 
 			@Override
 			public void onButtonBPressed() {
-				//				mPlayer.fire();
 			}
 
 			@Override
 			public void onButtonAPressed() {
-				mPlayer.jump();
+				mHero.perform(Jump.class, Ability.p(Jump.PARAM_HEIGHT, Hero.JUMP_HEIGHT));
 			}
 
 		});
@@ -64,12 +100,12 @@ public class GameScene extends BaseScene {
 
 	@Override
 	public void onCreateResources() {
-		mPlayer = new Player(100, 200, "gfx/game/Player.png");
+		mHero = new Hero(100, 200);
 	}
 
 	@Override
 	public void onCreateSprites() {
-		mPlayer.createSprite();
+		mHero.createSprite();
 	}
 
 }

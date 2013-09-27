@@ -5,7 +5,7 @@
  <tileset firstgid="127" source="level/Tileset3.tsx"/>
  <layer name="Chao" width="25" height="13">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA8tioC3IprH5lIJoIHZEwnED6xwMAHKfExKmh/uQ7YxjQA2jwRY+tATJaHxi0gos7BxJwKQAmPnOJGJamw/CDkAci8dcRwZEuiLHfGQMMws5HEF8TyqYDQCjXWsUFAUAAA==
+   H4sIAAAAAAAAA8tioC3IprH5lIJoIHZEwnED6xwMAHKfExKmh/uQ7YxjQA0jmP25QFwOxBVAXEkHNw0ESEbjE5NWYGHnSAImBcDMdyYR09p8EHYA4lg85joyINIVOeYjY5hZyOEI4ntSwWwANHcOAxQFAAA=
   </data>
  </layer>
  <objectgroup name="Contatos 1" width="25" height="13">
