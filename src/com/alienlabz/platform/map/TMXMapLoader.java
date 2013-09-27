@@ -54,7 +54,8 @@ public class TMXMapLoader implements MapLoader {
 							GlobalState.getVertexBufferObjectManager());
 					rect.setOffsetCenter(0, 0);
 					Body body = PhysicsFactory.createBoxBody(mPhysicsWorld, rect, BodyType.StaticBody, boxFixtureDef);
-					body.setUserData("Ground");
+
+					body.setUserData(object.getType());
 					rect.setVisible(false);
 					mScene.attachChild(rect);
 				}

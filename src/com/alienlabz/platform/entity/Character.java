@@ -126,7 +126,7 @@ abstract public class Character extends AnimatedEntity {
 		mBody.setFixedRotation(true);
 		createFeet();
 
-		mPhysicsWorld.setContactListener(getFootContactListener());
+		mPhysicsWorld.setContactListener(getContactListener());
 		mPhysicsWorld.registerPhysicsConnector(new PhysicsConnector(getSprite(), mBody, true, false) {
 
 			@Override
@@ -165,15 +165,15 @@ abstract public class Character extends AnimatedEntity {
 
 		lPoly.dispose();
 
-		mPhysicsWorld.setContactListener(getFootContactListener());
+		mPhysicsWorld.setContactListener(getContactListener());
 	}
 
 	/**
-	 * Colocar o Listener de contato para detectar toques dos pés.
+	 * Colocar o Listener de contato para detectar toques dos pés, morte e etc.
 	 * 
 	 * @return Listener de contatos.
 	 */
-	private ContactListener getFootContactListener() {
+	private ContactListener getContactListener() {
 		ContactListener contactListener = new ContactListener() {
 
 			public void beginContact(Contact contact) {
@@ -182,9 +182,19 @@ abstract public class Character extends AnimatedEntity {
 
 				if (x1.getBody().getUserData() != null && x2.getBody().getUserData() != null) {
 					if (x2.getBody().getUserData().equals("Player") || x1.getBody().getUserData().equals("Player")) {
-						if (x1.getUserData() != null && x1.getUserData().equals("Feet")) {
-							mFootContacts++;
+
+						// Detectando o toque do personagem em lugares que causam "morte".
+						if (x2.getBody().getUserData().equals("Death") || x1.getBody().getUserData().equals("Death")) {
+							Character.this.perform(Die.class);
 						}
+
+						// Detectando o toque dos pés no chão.
+						if (x2.getBody().getUserData().equals("Ground") || x1.getBody().getUserData().equals("Ground")) {
+							if (x1.getUserData() != null && x1.getUserData().equals("Feet")) {
+								mFootContacts++;
+							}
+						}
+
 					}
 				}
 			}
@@ -195,9 +205,14 @@ abstract public class Character extends AnimatedEntity {
 
 				if (x1.getBody().getUserData() != null && x2.getBody().getUserData() != null) {
 					if (x2.getBody().getUserData().equals("Player") || x1.getBody().getUserData().equals("Player")) {
-						if (x1.getUserData() != null && x1.getUserData().equals("Feet")) {
-							mFootContacts--;
+
+						// Detectando que o personagem tirou os "pés do chão".
+						if (x2.getBody().getUserData().equals("Ground") || x1.getBody().getUserData().equals("Ground")) {
+							if (x1.getUserData() != null && x1.getUserData().equals("Feet")) {
+								mFootContacts--;
+							}
 						}
+
 					}
 				}
 			}

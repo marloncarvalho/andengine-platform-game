@@ -65,6 +65,19 @@ public class Jump extends Ability {
 	 * @param pHeight Altura do pulo.
 	 */
 	private void jump(float pHeight) {
+		boolean isDeath = mCharacter.isAbleTo(Die.class);
+
+		// Verificar se o personagem Ž "morr’vel".
+		if (isDeath) {
+			Die lDie = (Die) mCharacter.getAbility(Die.class);
+
+			// Se est‡ morto, cancela tudo.
+			if (lDie.isExecuting()) {
+				mCharacter.getBody().setLinearVelocity(new Vector2(0, 0));
+				return;
+			}
+
+		}
 
 		// Verificar primeiro se j‡ n‹o est‡ pulando.
 		// ƒ necess‡rio primeiro concluir o pulo j‡ em andamento.

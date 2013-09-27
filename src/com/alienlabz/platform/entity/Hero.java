@@ -26,6 +26,12 @@ public class Hero extends Character {
 		lWalk.animationStartIndex = 25;
 		lWalk.animationEndIndex = 36;
 		ableTo(lWalk);
+
+		Die lDie = new Die();
+		lDie.animationDuration = new long[] { 200, 200, 200, 200, 200 };
+		lDie.animationStartIndex = 10;
+		lDie.animationEndIndex = 14;
+		ableTo(lDie);
 	}
 
 }

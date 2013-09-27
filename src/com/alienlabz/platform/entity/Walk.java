@@ -87,8 +87,22 @@ public class Walk extends Ability {
 	 * @param pVelocity Velocidade do movimento.
 	 */
 	private void walk(float pVelocity) {
+		boolean isDeath = mCharacter.isAbleTo(Die.class);
 		boolean isJumper = mCharacter.isAbleTo(Jump.class);
 		boolean isJumping = false;
+
+		// Verificar se o personagem é "morrível".
+		if (isDeath) {
+			Die lDie = (Die) mCharacter.getAbility(Die.class);
+			
+			// Se está morto, cancela tudo.
+			if ( lDie.isExecuting()) {
+				mCharacter.getBody().setLinearVelocity(new Vector2(0, 0));
+				return;
+			}
+
+		}
+
 
 		// Baseado na velocidade, obter a direção.
 		mDirection = getDirection(pVelocity);
